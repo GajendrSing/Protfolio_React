@@ -2,27 +2,31 @@ import logo from './logo.svg';
 import './App.css';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import Services from './components/Services';
+// import Navbar from './Pages/Navbar'
+import About from './routes/About'
+import Contact from './routes/Contact'
+// import Home from './routes/Home '
+import Service from './routes/Service'
+import Home from './routes/Home';
+import Hero from './Components/Hero';
+// import Navbar from './Components/Pages/Navbar';
 
 
 function App() {
   return (
-    <div className="px-5">
-     <Container>
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/project' element={<Projects/>}/>
-        <Route path='/service' element={<Services/>}/>
-      </Routes>
-    </Router>
-   </Container>
+    <div className="App">
+     
+        <Router>
+          
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/contact' element={<Contact/>} />
+            <Route path='/service' element={<Service/>} />
+          </Routes>
+         
+        </Router>
+     
     </div>
   );
 }
